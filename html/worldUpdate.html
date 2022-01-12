@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covidopedia</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <style>
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="check" />
+  <label for="check" class="show-btn">
+    <i class="fa fa-bars"></i>
+  </label>
+  <p id="brand">COVIDOPEDIA</p>
+        <ul>
+            <li></i><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+            <li><a href="indiaUpdate.html"><i class="fa fa-flag" aria-hidden="true"></i>IndiaCovidLive</a></li>
+            <li><a href="worldUpdate.html"><i class="fa fa-globe" aria-hidden="true"></i>WorldCovidLive</a></li>
+            <li><a href="about.html"><i class="fa fa-question-circle" aria-hidden="true"></i>About</a></li>
+            <label for="check" class="hide-btn">
+                <i class="fa fa-times"></i>
+              </label>
+        </ul>
+    </nav>
+    <div class="container-fluid my-5 p-5 bg-light text-center">
+        <h1>Covid World Tracker</h1>
+        <h5 class="text-muted">
+            Open Source Project for Tracking COVID-19 Cases in World
+        </h5>
+    </div>
+    <div class="container">
+        <div class="row text-center my-5">
+            <div class="col-4 text-warning border-bottom border-warning bg-light py-5">
+                <h5>Confirmed</h5>
+                <p id="confirmed"></p>
+            </div>
+            <div class="col-4 text-success border-bottom border-success bg-light py-5">
+                <h5>Recovered</h5>
+                <p id="recovered"></p>
+            </div>
+            <div class="col-4 text-danger border-bottom border-danger bg-light py-5">
+                <h5>Deaths</h5>
+                <p id="deaths"></p>
+            </div>
+        </div>
+    </div>
+        <div id='map' style='width: 100vw; height:100vh' class="my-5"></div>
+<div class="container">
+    <input class="form-control mb-5" id="myInput" type="text" placeholder="Search for any country..">
+    <div class="table-responsive bg-light">
+        <table id="wtable" class="table table-bordered table-striped text-center">
+            <tr class="thead-dark">
+                <th>Country</th>
+                <th>TotalConfirmed</th>
+                <th>TotalRecovered</th>
+                <th>TotalDeaths</th>
+                <th>NewConfirmed</th>
+                <th>NewRecovered</th>
+                <th>NewDeaths</th>
+            </tr>
+       
+        </table>
+    </div></div>
+    <div class="text-center my-5">
+        <h4 class="bg-light">COVIDOPEDIA</h4>
+        <h6>Let's fight Covid-19 together</h6>
+        <a href="https://github.com/ritikaAgrawal123/Covidopedia"><i class="fa fa-github fa-2x bg-dark" aria-hidden="true"></i></a>
+    </div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <script>
+        
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/worldUpdate.js"></script>
+</body>
+</html>
